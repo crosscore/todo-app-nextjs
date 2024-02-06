@@ -1,3 +1,4 @@
+// todo-app-nextjs/src/components/TodoList.js
 import React, { useState, useEffect } from 'react';
 
 const TodoList = () => {
@@ -6,17 +7,20 @@ const TodoList = () => {
 
     // ToDoリストの取得
     useEffect(() => {
-        // APIからToDoリストを取得するロジック
+        fetch('/api/todos')  // APIエンドポイントを適切に設定
+            .then(response => response.json())
+            .then(data => setTodos(data))
+            .catch(error => console.error('Error fetching data:', error));
     }, []);
-
-    // ステータス更新のハンドラー
-    const handleStatusChange = (todoId, newStatus) => {
-        // ToDoステータスを更新するロジック
-    };
 
     return (
         <ul>
-            {/* ToDoリストの項目を表示 */}
+            {todos.map(todo => (
+                <li key={todo.id}>
+                    {todo.task}
+                    {/* ここにステータス更新や編集リンクなどを追加 */}
+                </li>
+            ))}
         </ul>
     );
 };
