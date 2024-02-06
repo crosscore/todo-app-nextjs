@@ -1,0 +1,150 @@
+/* static/css/style.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #121212; /* ダーク背景色に変更 */
+    color: #fff; /* テキスト色を白に変更 */
+}
+
+h1 {
+    color: #fff; /* ヘッダーのテキスト色も白に変更 */
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #313131; /* リストアイテムの背景色を暗くする */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    color: #ffffff; /* リストアイテムのテキスト色を白に変更 */
+}
+
+a {
+    color: rgb(171, 182, 228);
+    text-decoration: none;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
+}
+
+a:hover, a:focus {
+    color: #e6e6e6; /* ホバー時の色 */
+    text-decoration: underline; /* 下線を追加 */
+}
+
+
+/* ボタンの基本スタイル */
+button {
+    background-color: #424242; /* ダークモード用の背景色 */
+    color: white; /* テキスト色 */
+    border: none; /* 境界線なし */
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 3px; /* 角丸 */
+    cursor: pointer; /* カーソルスタイル */
+    transition: background-color 0.3s; /* 背景色のトランジション */
+}
+
+/* ホバー時のボタンのスタイル */
+button:hover {
+    background-color: #575757; /* ホバー時の背景色 */
+}
+
+/* アクティブ時（クリックされた時）のボタンのスタイル */
+button:active {
+    background-color: #303030; /* アクティブ時の背景色 */
+}
+
+.status-checkbox {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    appearance: none; /* デフォルトのチェックボックススタイルをリセット */
+    background-color: #424242; /* ダークモード背景色 */
+    border: 1px solid #575757; /* 枠線 */
+    border-radius: 3px; /* 角丸 */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.status-checkbox:checked {
+    background-color: #4CAF50;
+    border-color: #4CAF50;
+}
+
+.status-checkbox:hover {
+    border-color: #e6e6e6; /* ホバー時の枠線色 */
+}
+
+input[type="text"], input[type="submit"] {
+    background-color: #424242; /* ダークモード背景色 */
+    color: white; /* テキスト色 */
+    border: 1px solid #575757; /* 枠線 */
+    padding: 5px; /* パディング */
+    border-radius: 3px; /* 角丸 */
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+input[type="text"]:hover, input[type="submit"]:hover {
+    border-color: #e6e6e6; /* ホバー時の枠線色 */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s;
+}
+
+.fade-out {
+    animation: fadeOut 0.5s;
+}
+
+@keyframes slideUp {
+    from { transform: translateY(0); }
+    to { transform: translateY(-100%); }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(0); }
+    to { transform: translateY(100%); }
+}
+
+.slide-up {
+    animation: slideUp 300ms ease-in-out;
+}
+
+.slide-down {
+    animation: slideDown 300ms ease-in-out;
+}
+
+@keyframes slideFadeUp {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(-100%); opacity: 0.5; }
+}
+
+@keyframes slideFadeDown {
+    from { transform: translateY(0); opacity: 1; }
+    to { transform: translateY(100%); opacity: 0.5; }
+}
+
+.slide-fade-up {
+    animation: slideFadeUp 300ms ease-in-out;
+}
+
+.slide-fade-down {
+    animation: slideFadeDown 300ms ease-in-out;
+}
